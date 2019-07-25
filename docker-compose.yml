@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+
+    app:
+        container_name: apache-php
+        image: registry.pk-dev.com/docker/apache-php
+        build: ./
+        networks:
+            - backend
+    
+networks:
+    backend:
+
+volumes:
+    mydata:
+    assets:
+    app:
