@@ -1,7 +1,6 @@
 build_master:
   stage: build
   only:
-    - master
     - tags
   image:
     name: docker:latest

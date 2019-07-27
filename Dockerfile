@@ -10,6 +10,7 @@ RUN a2enmod deflate proxy proxy_fcgi rewrite
 RUN docker-php-ext-configure zip --with-libzip
 RUN docker-php-ext-install mbstring gd mysqli pdo pdo_mysql
 
+COPY php.ini /usr/local/etc/php/conf.d/custom.ini
 
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 CMD ["/usr/bin/supervisord"]
