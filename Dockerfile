@@ -1,4 +1,4 @@
-FROM php:7.3-fpm
+FROM php:7.3-fpm-stretch
 
 RUN apt-get update && apt-get upgrade -yy && apt-get install sendmail apache2 libjpeg-dev libpng-dev libzip-dev libfreetype6-dev supervisor zip unzip software-properties-common -yy
 RUN mkdir -p /var/lock/apache2 /var/run/apache2 /var/run/sshd /var/log/supervisor
